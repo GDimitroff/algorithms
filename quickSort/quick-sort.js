@@ -1,4 +1,4 @@
-function quickSort(array, start, end) {
+function quickSort(array, start = 0, end = array.length - 1) {
   if (start >= end) return array;
 
   const index = partition(array, start, end);
@@ -28,9 +28,5 @@ function swap(array, a, b) {
   array[a] = array[b];
   array[b] = temp;
 }
-
-const array = [9, 3, 4, 6, 5];
-const result = quickSort(array, 0, array.length - 1);
-console.log(result);
 
 export default quickSort;
